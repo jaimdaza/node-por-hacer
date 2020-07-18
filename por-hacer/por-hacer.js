@@ -37,12 +37,9 @@ const guardarDB = () => {
 
 const listarTareas = (completado) => {
     cargarDB();
-    if (completado === null) {
+    if (completado === null)
         return listadoPorhacer;
-    } else {
-        return listadoPorhacer.filter(tarea => tarea.completado === completado);
-    }
-
+    return listadoPorhacer.filter(tarea => tarea.completado === completado);
 }
 
 const actualizar = (descripcion, completado = true) => {
